@@ -17,7 +17,7 @@ private:
 
     #pragma endregion
 
-    // Resize array on adding | appending if the array capacity if finished.
+    // Resize array on adding | appending if the array was full.
     void _ExpandCapacity(int newCapacity)
     {
         _capacity = newCapacity;
@@ -30,6 +30,7 @@ private:
         _list = newList; 
     }
 
+    // Make Count Property Read Only 
     void SetCount(int count)
     {
         _count = count;
@@ -38,7 +39,7 @@ private:
 public:
 
     #pragma region Properties
-
+    // Read Only Property 
     __declspec(property(get = GetCount, put = SetCount)) int Count;
     __declspec(property(get = GetCapacity, put = SetCount)) int Capacity;
 
@@ -49,6 +50,7 @@ public:
     // Default
     Array()
     {
+        // If user called the default constructor, make the capacity with 4 defaultly.
         _capacity = 4; // Default
         _list = new T[_capacity];
         _count = 0;
@@ -56,6 +58,7 @@ public:
 
     Array(int capacity)
     {
+        // Validation on the size 
         if (capacity < 1)
             cout << "Capacity must be more than 0.\n";
         else
@@ -66,18 +69,20 @@ public:
         }
     }
 
-    // Copy Constructor
+    // Copy Constructor to make deep copy 
+    // Source is constant to prevent the editing on this object.
     Array(const Array& source)
     {
+        // To prevent this line => arr1 = arr1; // Invalid
         if (this != &source)
         {
-            delete[] _list;
+            delete[] _list; // if the array was pointing to old object in heap i will delete it.
 
             this->_capacity = source._capacity;
             this->_count = source._count;
             this->_list = new T[_capacity];
 
-            // Copy Array
+            // Copy Array Elements
             for (int i = 0; i < Count; i++)
                 _list[i] = source._list[i];
         }
@@ -113,6 +118,7 @@ public:
         return _count;
     }
 
+    // Add items in the end of array.
     void Add(T value)   
     {
         if (IsFull())
@@ -122,6 +128,7 @@ public:
         _count++;
     }
 
+    // Add items in a specific index.
     void Insert(int index, T value)
     { 
         if (index < 0 || index > _capacity - 1)
@@ -153,6 +160,7 @@ public:
 
     }
 
+    // Remove item from a specific index.
     T Remove(int index)
     {
         if (IsEmpty() || index >= _count) 
@@ -176,6 +184,7 @@ public:
         return removedItem;
     }
 
+    // Linear Search
     bool Find(T value) // Linear Search
     {
         if (IsEmpty()) return false;
@@ -186,6 +195,7 @@ public:
         return false;
     }
 
+    // Get item of index N
     T RetrieveAt(int index)
     {
         if (index < 0 || index > _capacity - 1)
@@ -253,6 +263,7 @@ public:
 
     #pragma region Operators
 
+    // Assignment Operator to copy array object into another array.
     void operator =(const Array& source)
     {
         if (this != &source)

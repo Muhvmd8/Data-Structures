@@ -131,6 +131,7 @@
     <ClInclude Include="Copy.h" />
     <ClInclude Include="IntroductionToPointers.h" />
     <ClInclude Include="NullAndWiledPointers.h" />
+    <ClInclude Include="StackUsingArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
