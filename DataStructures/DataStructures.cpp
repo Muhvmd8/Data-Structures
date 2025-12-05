@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Arrays/GenericArray.h"
-//#include "PassingAndReturnPointers.h"
+#include "StackApplications.h"
 using namespace std;
 
 #pragma region Passing & Returning Pointers & Void Pointer
@@ -221,6 +221,43 @@ int main()
 	/// 
 	/// cout << "Array 1: \n";
 	/// arr1.Display();  
+	#pragma endregion
+
+	#pragma region Stack Applications
+
+	// Stack<char> myStack(3);
+	// myStack.Push('A');
+	// myStack.Push('B');
+	// myStack.Push('C');
+	// myStack.Display();
+	
+	// while (true)
+	// {
+	// 	char removedValue = myStack.Pop();
+	// 	if (removedValue != NULL)
+	// 		cout << "Removed value = " << removedValue << endl;
+	// 	else
+	// 	{
+	// 		cout << "Stack becomes empty" << endl;
+	// 		break;
+	// 	}
+	// }
+
+	// myStack.Reverse();
+	// myStack.Display();
+
+	/// string equation = "(a + b) * (b + a)";
+	/// bool isBalanced = StackApplications::IsBalancedParenthesis(equation);
+	/// if(isBalanced)
+	/// 	cout << "Yes\n";
+	/// else
+	/// 	cout << "No\n";
+	
+	/// Postfix
+	/// string s = "(a+b) * c";
+	/// string postfixS = StackApplications::ConvertToPostfix(s);
+	/// cout << postfixS; 
+	
 	#pragma endregion
 
 	return 0;

@@ -149,7 +149,7 @@ public:
             return;
         }
 
-        // 1 2 3 4 5 - - -   |   Capacity = 8,   Count = 5  indedx = 2, value = 2
+        // 1 2 3 4 5 - - -   |   Capacity = 8,   Count = 5  index = 2, value = 2
         // 1 2 - 3 4 5 - -       => Shifting Right
 
         for (int i = _count; i > index; i--)

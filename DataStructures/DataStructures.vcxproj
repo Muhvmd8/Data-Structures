@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="StackApplications.h" />
     <ClCompile Include="DataStructures.cpp" />
     <ClCompile Include="PassingAndReturnPointers.h" />
   </ItemGroup>

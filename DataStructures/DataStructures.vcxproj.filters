@@ -16,6 +16,9 @@
     <Filter Include="Pointers">
       <UniqueIdentifier>{9e8a35c6-1082-4a15-b310-9b4d3e37cb7a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Stack">
+      <UniqueIdentifier>{4a9a2d25-8ece-4450-abb8-dc7038fb8ad6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures.cpp">
@@ -23,6 +26,9 @@
     </ClCompile>
     <ClCompile Include="PassingAndReturnPointers.h">
       <Filter>Pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="StackApplications.h">
+      <Filter>Header Files\Stack</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,7 +45,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StackUsingArray.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Stack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
