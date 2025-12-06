@@ -7,13 +7,13 @@ class StackApplications
 {
 private:
 	  static bool IsOpenedParenthesis(char c)
-	{
-		return c == '(';
-	}
+	  {
+          return c == '(';
+	  }
 	  static bool IsClosedParenthesis(char c)
-	{
-		return c == ')';
-	}
+	  {
+	      return c == ')';
+	  }
 	  static bool IsOperator(char c)
 	  {
 		  return c == '+' || c == '-' || c == '*' || c == '/';
@@ -58,12 +58,12 @@ public:
                   output += c;
               }
               // Opening parenthesis
-              else if (c == '(')
+              else if (IsOpenedParenthesis(c))
               {
                   stack.Push(c);
               }
               // Closing parenthesis
-              else if (c == ')')
+              else if (IsClosedParenthesis(c))
               {
                   while (!stack.IsEmpty() && stack.Top() != '(')
                   {

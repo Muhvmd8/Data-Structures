@@ -129,9 +129,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arrays\GenericArray.h" />
+    <ClInclude Include="CircularQueue.h" />
     <ClInclude Include="Copy.h" />
+    <ClInclude Include="DoubleEndedQueue.h" />
     <ClInclude Include="IntroductionToPointers.h" />
     <ClInclude Include="NullAndWiledPointers.h" />
+    <ClInclude Include="QueueUsingArray.h" />
     <ClInclude Include="StackUsingArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

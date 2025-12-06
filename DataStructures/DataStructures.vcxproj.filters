@@ -19,6 +19,9 @@
     <Filter Include="Header Files\Stack">
       <UniqueIdentifier>{4a9a2d25-8ece-4450-abb8-dc7038fb8ad6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Queue">
+      <UniqueIdentifier>{e1e915de-470f-4924-8a16-4c368bf1b203}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructures.cpp">
@@ -46,6 +49,15 @@
     </ClInclude>
     <ClInclude Include="StackUsingArray.h">
       <Filter>Header Files\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueUsingArray.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularQueue.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleEndedQueue.h">
+      <Filter>Header Files\Queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
