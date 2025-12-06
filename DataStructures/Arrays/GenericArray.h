@@ -3,7 +3,6 @@
 using namespace std;
 
 // Dynamic & Generic Array
-
 template <class T>
 class Array
 {
@@ -107,14 +106,16 @@ public:
         return _capacity;
     }
 
-    void SetCapacity(int value) {
+    void SetCapacity(int value) 
+    {
         if (value >= 1)
             _capacity = value;
         else 
             cout << "Capacity must be more than 0.\n";
     }
 
-    int GetCount() {
+    int GetCount() 
+    {
         return _count;
     }
 
@@ -149,9 +150,7 @@ public:
             return;
         }
 
-        // 1 2 3 4 5 - - -   |   Capacity = 8,   Count = 5  index = 2, value = 2
-        // 1 2 - 3 4 5 - -       => Shifting Right
-
+        // Shifting Right
         for (int i = _count; i > index; i--)
             _list[_count] = _list[_count - 1];
 
